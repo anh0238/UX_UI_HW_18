@@ -54,6 +54,7 @@ h4 {
 
 p {
     font-family: nixieOne;
+    font-size: 16px;
 }
 
 /* HEADER ----> */
@@ -139,78 +140,6 @@ li {
     background-color: #414042;
     color: #c4ab2f;
 }
-/* PREVIOUS "MY WORK" SECTION CSS ---->
-#myWork {
-    display: flex;
-    flex-direction: column; 
-    padding-top: 50px;
-
-}
-
-#workHeadline {
-    align-self: center;
-    padding-bottom: 20px;
-}
-
-.projectSummary {
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-}
-
-.myWorkSegmentLeft {
-    display: grid;
-    grid-template-columns: 70% 30%;
-}
-
-.myWorkSegmentRight {
-    display: grid;
-    flex-direction: 30% 70%;
-}
-
-.projectImage {
-    margin-top: 10px;
-    margin-bottom: 10px;  
-
-}
-
-#projectOne {
-    background-color: #e8dce5;
-    width: 70%;
-    height: 350px;
-    align-self: flex-start;
-    
-}
-
-#projectTwo {
-    background-color: #c4ab2f;
-    width: 70%;
-    height: 350px;
-    align-self: flex-end;
-
-}
-
-#projectThree {
-    background-color: #429cd6;
-    width: 70%;
-    height: 350px;
-}
-
-#imageOne {
-    width: 30%;
-    height:350px;
-}
-
-#imageTwo {
-    width: 30%;
-    height:350px;   
-}
-
-#imageThree {
-    width: 30%;
-    height:350px;
-}
-*/
 
 /* MY WORK ----> */
 #myWork {
@@ -294,7 +223,8 @@ li {
 }
 
 #summaryInfoTwo {
-    justify-self: flex-end;
+    text-align: right;
+    max-width: 80%;
 }
 
 #projectTwo {
@@ -302,6 +232,10 @@ li {
     max-width: auto;
     max-height: 350px;
     background-color: #e8dce5;
+}
+
+#buttonProjectTwo {
+    align-self: flex-end;
 }
 
 #cardThree {
@@ -318,6 +252,7 @@ li {
     background-color: #e8dce5;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;  
 }
 
 #projectThree {
@@ -399,8 +334,129 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 20px;
 }
 
+.extraSmall {
+    font-size: x-small;
+}
 #copyrightIcon {
-    width: 1%;
+    width: .5%;
+}
+
+/* FOR MOBILE ----> */
+@media only screen and (max-width: 600px) {
+
+/* HERO IMAGE ----> */
+#heroImage {
+    height: 500px;
+    width: 100%;
+    background-color: #e8dce5;
+    display: flex;
+
+}
+
+#aboutText {
+    float: left;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    
+}
+
+#aboutImage {
+    padding-bottom: 20px;
+    float: left; 
+    width: 10%;
+    height: auto;
+} 
+
+.download {
+    background-color: #c4ab2f;
+    font-family: champagneLimousines;
+    color: #414042;
+    font-size: 16px;
+    border: 1px #c4ab2f;
+    border-radius: 12px;
+    padding: 10px;
+    transition-duration: .3s;
+    box-shadow: none;
+    margin-bottom: 40px;
+}
+
+.download:hover {
+    background-color: #414042;
+    color: #c4ab2f;
+}
+
+/* MY WORK ----> */
+.projectCards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "cardOne"
+    "cardTwo"
+    "cardThree"
+    ;
+
+}
+
+#cardOne {
+    grid-area: "cardOne";
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+#projectOne {
+    display: none;
+}
+
+#buttonProjectOne {
+    margin-bottom: 60px;
+}
+
+.summaryInfo {
+    height: auto;
+}
+
+#cardTwo {
+    grid-area: "cardTwo";
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+#projectTwo {
+    display: none;
+}
+
+#cardThree {
+    grid-area: "cardThree";
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+#projectThree {
+    display: none;
+}
+
+#footerContent {
+    background-color: #414042;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
 }
