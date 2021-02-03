@@ -349,27 +349,32 @@ footer {
 
 /* HERO IMAGE ----> */
 #heroImage {
-    height: 500px;
+    height: auto;
     width: 100%;
     background-color: #e8dce5;
     display: flex;
-
+    flex-direction: column-reverse;
 }
 
 #aboutText {
-    float: left;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    
+    justify-content: center;
+    margin-top: 0px; 
+    padding-top: 0px;
 }
 
 #aboutImage {
-    padding-bottom: 20px;
-    float: left; 
-    width: 10%;
-    height: auto;
+align-self: flex-end;
+margin-top: 60px;
+margin-bottom: 0px;
+padding-bottom: 0px;
 } 
+
+#headshot {
+    width: 100px;
+    height: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
 
 .download {
     background-color: #c4ab2f;
